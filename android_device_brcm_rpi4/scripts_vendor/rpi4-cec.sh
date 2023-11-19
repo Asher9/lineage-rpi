@@ -1,0 +1,37 @@
+#!/vendor/bin/sh
+
+#
+# Copyright (C) 2019-2022 KonstaKANG <konstakang@gmail.com>
+#
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+
+source /vendor/bin/rpi4-utils.sh
+
+mount_partitions()
+{
+  echo "Mounting partitions..."
+  mount_rw /vendor
+}
+
+cec_properties()
+{
+  echo "Changing properties for CEC..."
+  switch_property ro.hdmi.cec_device .*$ $1 /vendor/build.prop
+}
+
+unmount_partitions()
+{
+  echo "Unmounting partitions..."
+  mount_ro /vendor
+}
+
+if [ ! -z $1 ]; then
+  check_root
+  mount_partitions
+  cec_properties $1
+  unmount_partitions
+  finish
+else
+  echo "Usage: $0 cec0|cec1"
+fi

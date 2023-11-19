@@ -1,0 +1,70 @@
+# Audio
+persist.audio.pcm.card=0
+persist.audio.pcm.device=0
+ro.config.media_vol_default=20
+ro.config.media_vol_steps=25
+# Bluetooth
+ro.rfkilldisabled=1
+# Camera
+#media.settings.xml=/vendor/etc/media_profiles_V1_0.xml
+ro.hardware.camera=libcamera
+# CEC
+#ro.hdmi.cec_device=cec0
+#ro.hdmi.device_type=4
+# Display
+ro.sf.lcd_density=180
+ro.sf.auto_lcd_density=true
+# GPS
+ro.kernel.android.gps=ttyACM0
+# Graphics
+#debug.renderengine.backend=gles
+gralloc.drm.kms=/dev/dri/card0
+gralloc.drm.device=/dev/dri/card1
+ro.hardware.egl=mesa
+ro.hardware.hwcomposer=drm
+ro.hardware.gralloc=gbm
+ro.hardware.vulkan=broadcom
+ro.opengles.version=196609
+# LMKD
+ro.lmk.critical=0
+ro.lmk.critical_upgrade=false
+ro.lmk.downgrade_pressure=100
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=100
+ro.lmk.log_stats=true
+ro.lmk.low=1001
+ro.lmk.medium=800
+ro.lmk.upgrade_pressure=100
+ro.lmk.use_minfree_levels=true
+# Sensors
+ro.hardware.sensors=iio
+ro.iio.accel.quirks=no-trig,no-event
+ro.iio.anglvel.quirks=no-trig,no-event
+ro.iio.humidity.quirks=no-trig,no-event
+ro.iio.illuminance.quirks=no-trig,no-event
+ro.iio.magn.quirks=no-trig,no-event
+ro.iio.pressure.quirks=no-trig,no-event
+ro.iio.proximity.quirks=no-trig,no-event
+ro.iio.temp.quirks=no-trig,no-event
+ro.iio.accel.lsm303d.name=LSM303DLHC Accelerometer
+ro.iio.accel.lsm6ds3.name=LSM6DS3 Accelerometer
+ro.iio.accel.mpu6050.name=MPU6050 Accelerometer
+ro.iio.anglvel.lsm6ds3.name=LSM6DS3 Gyroscope
+ro.iio.anglvel.mpu6050.name=MPU6050 Gyroscope
+ro.iio.humidity.bme280.name=BME280 Humidity
+ro.iio.illuminance.apds993.name=APDS9930 Illuminance
+ro.iio.magn.lsm303d.name=LSM303DLHC Magnetometer
+ro.iio.pressure.bme280.name=BME280 Pressure
+ro.iio.pressure.bmp280.name=BMP280 Pressure
+ro.iio.proximity.apds993.name=APDS9930 Proximity
+ro.iio.temp.bme280.name=BME280 Temperature
+ro.iio.temp.bmp280.name=BMP280 Temperature
+ro.iio.temp.mpu6050.name=MPU6050 Temperature
+# V4L2
+#debug.stagefright.c2-poolmask=0xf50000
+#ro.vendor.v4l2_codec2.decode_concurrent_instances=8
+#ro.vendor.v4l2_codec2.encode_concurrent_instances=8
+# Wifi
+wifi.interface=wlan0
+# XML
+persist.sys.binary_xml=false

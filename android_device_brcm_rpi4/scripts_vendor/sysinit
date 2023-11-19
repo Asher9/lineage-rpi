@@ -1,0 +1,24 @@
+#!/system/bin/sh
+
+source /vendor/bin/rpi4-utils.sh
+
+export PATH=/system/bin:/system/xbin:/vendor/bin:/vendor/xbin
+for i in /vendor/etc/init.d/*; do
+    if [ -x $i ]; then
+        /system/bin/log -p i -t init.d Running $i
+        $i
+    fi
+done
+
+if [ -d /boot ]; then
+    echo "Mounting partitions..."
+    mount_rw /
+    mount /dev/block/mmcblk0p1 /boot
+    mount_ro /
+else
+    echo "Mounting partitions..."
+    mount_rw /
+    mkdir /boot
+    mount /dev/block/mmcblk0p1 /boot
+    mount_ro /
+fi

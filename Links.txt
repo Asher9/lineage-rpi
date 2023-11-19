@@ -1,0 +1,11 @@
+https://archive.fosdem.org/2019/schedule/event/android_pi/attachments/slides/2998/export/events/attachments/android_pi/slides/2998/android_rpi_csimmonds_fosdem_2019.pdf
+https://github.com/LineageOS/android
+https://github.com/lohriialo/device_arpi_rpi4
+https://github.com/android-rpi/device_arpi_rpi4/blob/arpi-12/BoardConfig.mk
+https://github.com/lineage-rpi/android_local_manifest/blob/lineage-17.1/manifest_brcm_rpi.xml
+https://github.com/omnirom/proprietary_vendor_brcm/blob/android-11/rpi4/rpi4-vendor.mk
+https://github.com/omnirom/android_device_brcm_rpi4/blob/android-12.1/BoardConfig.mk
+https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#raspberry-pi-4-model-b
+https://cs.android.com/android/platform/superproject/+/master:hardware/broadcom/libbt/src/
+https://source.android.com/devices/tech/perf/hiber
+https://source.android.com/devices/graphics/implement-opengl-es

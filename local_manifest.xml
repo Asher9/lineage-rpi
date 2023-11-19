@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- Raspberry Pi -->
+    <!--project path="vendor/brcm" name="lineage-rpi/proprietary_vendor_brcm" /-->
+    <project path="kernel/brcm/rpi4" name="lineage-rpi/android_kernel_brcm_rpi" />
+    <!--project path="vendor/brcm" name="lineage-rpi/proprietary_vendor_brcm" /-->
+
+    <remove-project name="platform/external/mesa3d" />
+    <project path="external/mesa3d" name="lineage-rpi/android_external_mesa3d" />
+
+    <remove-project name="platform/external/drm_hwcomposer" />
+    <project path="external/drm_hwcomposer" name="lineage-rpi/android_external_drm_hwcomposer" />
+
+    <remove-project name="platform/external/libdrm" />
+    <project path="external/libdrm" name="lineage-rpi/android_external_libdrm" />
+
+    <remove-project name="platform/external/minigbm" />
+    <project path="external/minigbm" name="lineage-rpi/android_external_minigbm" />
+
+    <remove-project name="platform/external/v4l2_codec2" />
+    <project path="external/v4l2_codec2" name="lineage-rpi/android_external_v4l2_codec2" />
+
+    <project path="hardware/intel/sensors-iio" name="lineage-rpi/android_hardware_intel_sensors-iio" />
+
+    <project path="external/boost" name="android-rpi/external_boost" revision="boost-next" />
+
+    <project path="external/libcamera" name="lineage-rpi/android_external_libcamera" />
+
+    <project path="external/libyuv_chromium" name="android-rpi/external_libyuv_chromium" revision="libyuv_chromium-next" />
+
+    <project path="external/libyaml" name="yaml/libyaml" revision="master" />
+
+    <project path="external/v4l-utils" name="lineage-rpi/android_external_v4l-utils" />
+
+    <!--remove-project name="LineageOS/android_bootable_recovery" /-->
+    <!--project path="bootable/recovery" name="TeamWin/android_bootable_recovery" revision="android-12.1" /-->
+</manifest>
