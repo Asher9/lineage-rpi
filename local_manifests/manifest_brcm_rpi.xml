@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- Raspberry Pi -->
+    <project path="vendor/brcm" name="raspberry-vanilla/proprietary_vendor_brcm" remote="github" revision="android-14.0" />
+    <!--project path="kernel/brcm/rpi4" name="lineage-rpi/android_kernel_brcm_rpi" revision="lineage-20.0"/-->
+    <!--project path="device/brcm/rpi4-kernel" name="raspberry-vanilla/android_device_brcm_rpi4-kernel" remote="github" revision="android-14.0" /-->
+    <!--project path="vendor/brcm" name="lineage-rpi/proprietary_vendor_brcm" /-->
+
+    <!-- Audio -->
+    <project path="external/alsa-lib" name="raspberry-vanilla/android_external_alsa-lib" remote="github" revision="android-14.0" />
+    <project path="external/alsa-utils" name="raspberry-vanilla/android_external_alsa-utils" remote="github" revision="android-14.0" />
+
+    <!-- Camera -->
+    <project path="external/libcamera" name="raspberry-vanilla/android_external_libcamera" remote="github" revision="android-14.0" />
+    <project path="external/libpisp" name="raspberry-vanilla/android_external_libpisp" remote="github" revision="android-14.0" />
+    <project path="external/libyaml" name="raspberry-vanilla/android_external_libyaml" remote="github" revision="android-14.0" />
+    <project path="external/libyuv_chromium" name="raspberry-vanilla/android_external_libyuv_chromium" remote="github" revision="android-14.0" />
+
+    <!-- FFmpeg -->
+    <remove-project name="platform/external/libdav1d" />
+    <project path="external/ffmpeg" name="raspberry-vanilla/android_external_ffmpeg" remote="github" revision="android-14.0" />
+    <project path="external/ffmpeg_codec2" name="raspberry-vanilla/android_external_ffmpeg_codec2" remote="github" revision="android-14.0" />
+    <project path="external/libdav1d" name="raspberry-vanilla/android_external_libdav1d" remote="github" revision="android-14.0" />
+    <project path="external/libudev-zero" name="raspberry-vanilla/android_external_libudev-zero" remote="github" revision="android-14.0" />
+
+    <!-- Graphics -->
+    <remove-project name="platform/external/drm_hwcomposer" />
+    <remove-project name="platform/external/libdrm" />
+    <remove-project name="platform/external/mesa3d" />
+    <remove-project name="platform/external/minigbm" />
+    <project path="external/drm_hwcomposer" name="raspberry-vanilla/android_external_drm_hwcomposer" remote="github" revision="android-14.0" />
+    <project path="external/libdrm" name="raspberry-vanilla/android_external_libdrm" remote="github" revision="android-14.0" />
+    <project path="external/mesa3d" name="raspberry-vanilla/android_external_mesa3d" remote="github" revision="android-14.0" />
+    <project path="external/minigbm" name="raspberry-vanilla/android_external_minigbm" remote="github" revision="android-14.0" />
+
+    <!-- v4l2_codec2 -->
+    <remove-project name="platform/external/v4l2_codec2" />
+    <project path="external/v4l2_codec2" name="raspberry-vanilla/android_external_v4l2_codec2" remote="github" revision="android-14.0" />
+
+    <!-- VNC -->
+    <project path="external/tigervnc" name="lineage-rpi/android_external_tigervnc" remote="github" revision="lineage-21" />
+    <project path="external/vncflinger" name="lineage-rpi/android_external_vncflinger" remote="github" revision="lineage-21" />
+
+    <!-- OpenSSH -->
+    <remove-project path="external/openssh" />
+    <project path="external/openssh" name="lineage-rpi/android_external_openssh" remote="github" revision="lineage-21" />
+
+    <!-- iio sensors -->
+    <project path="hardware/intel/sensors-iio" name="lineage-rpi/android_hardware_intel_sensors-iio" remote="github" revision="lineage-21" />
+
+    <!-- GPS -->
+    <project path="hardware/gps" name="lineage-rpi/android_hardware_gps" remote="github" revision="lineage-21" />
+
+    <!-- Wifi -->
+    <remove-project name="LineageOS/android_external_wpa_supplicant_8" />
+    <remove-project name="LineageOS/android_packages_modules_Wifi" />
+    <project path="external/wpa_supplicant_8" name="raspberry-vanilla/android_external_wpa_supplicant_8" remote="github" revision="android-14.0" />
+    <project path="packages/modules/Wifi" name="raspberry-vanilla/android_packages_modules_Wifi" remote="github" revision="android-14.0" />
+
+</manifest>

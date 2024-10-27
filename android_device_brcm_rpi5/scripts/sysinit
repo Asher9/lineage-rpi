@@ -1,0 +1,9 @@
+#!/system/bin/sh
+
+export PATH=/system/bin:/system/xbin:/vendor/bin:/vendor/xbin
+for i in /vendor/etc/init.d/*; do
+    if [ -x $i ]; then
+        /system/bin/log -p i -t init.d Running $i
+        $i
+    fi
+done

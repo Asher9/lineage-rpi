@@ -1,0 +1,7 @@
+on post-fs-data
+    start sysinit
+
+service sysinit /vendor/bin/sysinit
+    user root
+    oneshot
+    disabled

@@ -1,0 +1,16 @@
+#!/vendor/bin/sh
+
+#
+# Copyright (C) 2019-2023 KonstaKANG <konstakang@gmail.com>
+#
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+
+L="log -p i -t init.d"
+
+$L " _  __               _        _  __    _    _   _  ____ "
+$L "| |/ /___  _ __  ___| |_ __ _| |/ /   / \  | \ | |/ ___|"
+$L "| ' // _ \| '_ \/ __| __/ _\` | ' /   / _ \ |  \| | |  _ "
+$L "| . \ (_) | | | \__ \ || (_| | . \  / ___ \| |\  | |_| |"
+$L "|_|\_\___/|_| |_|___/\__\__,_|_|\_\/_/   \_\_| \_|\____|"
+$L "Welcome to Android $(getprop ro.build.version.release)"

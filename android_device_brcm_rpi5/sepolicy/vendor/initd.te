@@ -1,0 +1,6 @@
+type initd, domain;
+type initd_exec, exec_type, file_type;
+
+init_daemon_domain(initd);
+
+allow initd initd_exec:file { read getattr map execute open entrypoint };

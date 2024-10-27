@@ -1,0 +1,13 @@
+#!/vendor/bin/sh
+
+#
+# Copyright (C) 2019-2023 KonstaKANG <konstakang@gmail.com>
+#
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+
+if [ -f /boot/rc_keymap.txt ]; then
+  /vendor/bin/ir-keytable -c -w /boot/rc_keymap.txt
+elif [ -f /boot/rc_keymap.toml ]; then
+  /vendor/bin/ir-keytable -c -w /boot/rc_keymap.toml
+fi

@@ -1,2 +1,0 @@
-type rfkill_device, dev_type, mlstrustedobject;
-type gpio_dev, dev_type, mlstrustedobject;

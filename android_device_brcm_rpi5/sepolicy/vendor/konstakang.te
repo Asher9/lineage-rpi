@@ -1,0 +1,6 @@
+type konstakang, domain;
+type konstakang_exec, exec_type, file_type;
+
+init_daemon_domain(konstakang);
+
+allow konstakang konstakang_exec:file { read getattr map execute open entrypoint };

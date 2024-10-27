@@ -1,0 +1,6 @@
+allow init kernel:system module_request;
+allow init tmpfs:lnk_file create;
+
+dontaudit init konstakang:process noatsecure;
+allow init konstakang:process { rlimitinh siginh transition };
+allow init konstakang_exec:file { read getattr map execute open };

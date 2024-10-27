@@ -1,0 +1,119 @@
+#
+# Copyright (C) 2019-2023 KonstaKANG <konstakang@gmail.com>
+#
+# SPDX-License-Identifier: CC-BY-NC-SA-4.0
+#
+
+on init
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
+
+on property:sys.boot_completed=1 && property:persist.cpufreq.governor=*
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ${persist.cpufreq.governor}
+
+on property:sys.rpi.audio_device=*
+    start rpi_audio_device
+
+on property:sys.rpi.audio_dac=*
+    start rpi_audio_dac
+
+on property:sys.rpi.cec_device=*
+    start rpi_cec_device
+
+on property:sys.rpi.cpu_overclock=*
+    start rpi_cpu_overclock
+
+on property:sys.rpi.display_resolution=*
+    start rpi_display_resolution
+
+on property:sys.rpi.ir_remote=*
+    start rpi_ir_remote
+
+on property:sys.rpi.keys=*
+    start rpi_keys
+
+on property:sys.rpi.recovery=*
+    start rpi_recovery
+
+on property:sys.rpi.rtc=*
+    start rpi_rtc
+
+on property:sys.rpi.sensors=*
+    start rpi_sensors
+
+on property:sys.rpi.serial_console=*
+    start rpi_serial_console
+
+on property:sys.rpi.touchscreen=*
+    start rpi_touchscreen
+
+service rpi_audio_device /vendor/bin/rpi-audio.sh ${sys.rpi.audio_device}
+    user root
+    group system
+    disabled
+    oneshot
+
+service rpi_audio_dac /vendor/bin/rpi-dac.sh ${sys.rpi.audio_dac}
+    user root
+    group system
+    disabled
+    oneshot
+
+service rpi_cec_device /vendor/bin/rpi-cec.sh ${sys.rpi.cec_device}
+    user root
+    group system
+    disabled
+    oneshot
+
+service rpi_cpu_overclock /vendor/bin/rpi-overclock.sh ${sys.rpi.cpu_overclock}
+    user root
+    group system
+    disabled
+    oneshot
+
+service rpi_display_resolution /vendor/bin/rpi-resolution.sh ${sys.rpi.display_resolution}
+    user root
+    group system
+    disabled
+    oneshot
+
+service rpi_ir_remote /vendor/bin/rpi-ir.sh ${sys.rpi.ir_remote}
+    user root
+    group system
+    disabled
+    oneshot
+
+service rpi_keys /vendor/bin/rpi-keys.sh ${sys.rpi.keys}
+    user root
+    group system
+    disabled
+    oneshot
+
+service rpi_recovery /vendor/bin/rpi-recovery.sh ${sys.rpi.recovery}
+    user root
+    group system
+    disabled
+    oneshot
+
+service rpi_rtc /vendor/bin/rpi-rtc.sh ${sys.rpi.rtc}
+    user root
+    group system
+    disabled
+    oneshot
+
+service rpi_sensors /vendor/bin/rpi-sensors.sh ${sys.rpi.sensors}
+    user root
+    group system
+    disabled
+    oneshot
+
+service rpi_serial_console /vendor/bin/rpi-console.sh ${sys.rpi.serial_console}
+    user root
+    group system
+    disabled
+    oneshot
+
+service rpi_touchscreen /vendor/bin/rpi-touchscreen.sh ${sys.rpi.touchscreen}
+    user root
+    group system
+    disabled
+    oneshot
